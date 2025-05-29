@@ -1,4 +1,36 @@
-# sv
+# How to run the app localy
+
+$Disclaimer
+
+This project is still under development, but you also can use it as reference, all of setup environtment still on research and development to ensure the stability and robust.
+and also i still working on the UI side and other fucntionality for increasing productivity
+
+
+# Tech Stack
+1. Svelte
+2. electron
+3. API (soon)
+
+# Setup 
+if you want create a similar project i use to build this how i done 
+
+1. npm create svelte@latest my-note-app
+2. cd to the directory. For this is my-note-app
+3. npm install
+4. npm install electron --save-dev (inside the project)
+5. Create electron/main.ts
+6. Create electron/preload.ts
+7. Update your vite.config.ts
+
+
+
+
+
+
+
+
+
+
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
