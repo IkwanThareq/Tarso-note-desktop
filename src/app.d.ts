@@ -1,6 +1,6 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
-export {};
+export { };
 declare global {
 	namespace App {
 		// interface Error {}
@@ -11,11 +11,13 @@ declare global {
 	}
 
 	interface Window {
-    api: {
-      saveNote(content: string): Promise<{ success: boolean }>;
-      loadNote(): Promise<{ success: boolean; content?: string }>;
-    };
-  }
+		api: {
+			saveNote(content: string): Promise<{
+				updated: any; success: boolean
+			}>;
+			loadNote(): Promise<{ success: boolean; content?: string }>;
+		};
+	}
 }
 
-export {};
+export { };

@@ -1,13 +1,20 @@
 <script lang="ts">
   let noteContent: string = '';
 
-  async function saveNote() {
-    const result = await window.api.saveNote(noteContent);
-    if (!result.success) alert('Save failed');
-  }
+async function saveNote() {
+	const result = await window.api.saveNote(noteContent);
+	if (result.success) {
+		alert(result.updated ? 'File updated successfully' : 'File saved as new');
+	} else {
+		alert('Save failed');
+	}
+}
+
 
   async function loadNote() {
+	console.log("rendererSvelte call LoadNote");
 		const result = await window.api.loadNote();
+		console.log("rendererSvelte call LoadNote", result);
 		if (result.success) {
 			noteContent = result.content ?? '';
 		} else {
